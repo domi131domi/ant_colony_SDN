@@ -18,24 +18,24 @@
     <ClCompile Include="AntColonySDN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AntColonyAlghorithm.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Ant.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DijkstraAlghorithm.cpp">
+    <ClCompile Include="AntColonyAlgorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DijkstraAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AntColonyAlghorithm.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Ant.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DijkstraAlghorithm.h">
+    <ClInclude Include="AntColonyAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DijkstraAlgorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

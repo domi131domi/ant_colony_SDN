@@ -1,7 +1,7 @@
 #pragma once
 #include <stdexcept>
 
-class AntColonyAlghorithm
+class AntColonyAlgorithm
 {
 	void Iterate(unsigned iterations);
 	void MoveAnts();
