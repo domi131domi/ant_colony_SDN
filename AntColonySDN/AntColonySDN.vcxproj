@@ -151,7 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ant.cpp" />
+    <ClCompile Include="AntColonyAlghorithm.cpp" />
     <ClCompile Include="AntColonySDN.cpp" />
+    <ClCompile Include="DijkstraAlghorithm.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ant.h" />
+    <ClInclude Include="AntColonyAlghorithm.h" />
+    <ClInclude Include="DijkstraAlghorithm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
