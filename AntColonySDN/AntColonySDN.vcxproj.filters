@@ -13,30 +13,74 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\DataManagement">
+      <UniqueIdentifier>{d99254e0-e267-4706-84f7-2b3ae517cefa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataMangement">
+      <UniqueIdentifier>{7434110e-1d09-4873-9c98-334f363f754c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AntColonyAlgorithm">
+      <UniqueIdentifier>{eb44f2b6-f68d-47b3-af6e-2855ec2785fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AntColonyAlgorithm">
+      <UniqueIdentifier>{4483b1ea-9f53-4b37-aa1a-b14430ca8d18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{163ab4b9-6558-4784-9ebb-d6ae43972048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{5be20c9a-d565-426a-ac5b-d0bf5d0f5323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataMangement\RAPIDXML">
+      <UniqueIdentifier>{bab59696-d885-4d9a-8d0f-5f0279b3fa9e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AntColonySDN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ant.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DataManagement\DataLoader.cpp">
+      <Filter>Source Files\DataMangement</Filter>
     </ClCompile>
-    <ClCompile Include="AntColonyAlgorithm.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="AntColonyAlgorithm\Ant.cpp">
+      <Filter>Source Files\AntColonyAlgorithm</Filter>
     </ClCompile>
-    <ClCompile Include="DijkstraAlgorithm.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="AntColonyAlgorithm\AntColonyAlgorithm.cpp">
+      <Filter>Source Files\AntColonyAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\DijkstraAlgorithm.cpp">
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ant.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AntColonyAlgorithm\Ant.h">
+      <Filter>Header Files\AntColonyAlgorithm</Filter>
     </ClInclude>
-    <ClInclude Include="AntColonyAlgorithm.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AntColonyAlgorithm\AntColonyAlgorithm.h">
+      <Filter>Header Files\AntColonyAlgorithm</Filter>
     </ClInclude>
-    <ClInclude Include="DijkstraAlgorithm.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DataManagement\DataLoader.h">
+      <Filter>Header Files\DataManagement</Filter>
     </ClInclude>
+    <ClInclude Include="Utils\DijkstraAlgorithm.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml.hpp">
+      <Filter>Source Files\DataMangement\RAPIDXML</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml_iterators.hpp">
+      <Filter>Source Files\DataMangement\RAPIDXML</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml_print.hpp">
+      <Filter>Source Files\DataMangement\RAPIDXML</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml_utils.hpp">
+      <Filter>Source Files\DataMangement\RAPIDXML</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="germany50.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
   </ItemGroup>
 </Project>
