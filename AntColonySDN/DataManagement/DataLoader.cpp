@@ -26,6 +26,7 @@ void DataLoader::LoadXml()
 
 void DataLoader::LoadFile()
 {
+
 	std::ifstream indata(path);
 	if (!indata)
 		throw std::runtime_error("Couldn't open file");

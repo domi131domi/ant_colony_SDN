@@ -51,6 +51,15 @@
     <ClCompile Include="Utils\DijkstraAlgorithm.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="DataManagement\NetworkStructure.cpp">
+      <Filter>Source Files\DataMangement</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManagement\Link.cpp">
+      <Filter>Source Files\DataMangement</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManagement\Node.cpp">
+      <Filter>Source Files\DataMangement</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AntColonyAlgorithm\Ant.h">
@@ -77,9 +86,18 @@
     <ClInclude Include="DataManagement\RAPIDXML\rapidxml_utils.hpp">
       <Filter>Source Files\DataMangement\RAPIDXML</Filter>
     </ClInclude>
+    <ClInclude Include="DataManagement\NetworkStructure.h">
+      <Filter>Header Files\DataManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagement\Link.h">
+      <Filter>Header Files\DataManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManagement\Node.h">
+      <Filter>Header Files\DataManagement</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="germany50.xml">
+    <Xml Include="Resources\germany50.xml">
       <Filter>Resource Files</Filter>
     </Xml>
   </ItemGroup>

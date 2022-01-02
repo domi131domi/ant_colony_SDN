@@ -3,8 +3,17 @@
 
 int main()
 {
-    std::cout << "Witaj projekcie!\n";
+	try
+	{
+		std::cout << "Witaj projekcie!\n";
 
-	DataLoader loader("C:/Users/dominik.szacilowski/Desktop/POP/ant_colony_SDN/AntColonySDN/Resources/germany50.xml");
-	loader.LoadXml();
+		DataLoader loader("../AntColonySDN/Resources/germany50.xml");
+		loader.LoadXml();
+
+
+	}
+	catch (std::exception ex)
+	{
+		std::cout << ex.what() << std::endl;
+	}
 }
