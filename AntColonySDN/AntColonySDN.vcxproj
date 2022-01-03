@@ -151,15 +151,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ant.cpp" />
-    <ClCompile Include="AntColonyAlgorithm.cpp" />
+    <ClCompile Include="AntColonyAlgorithm\Ant.cpp" />
+    <ClCompile Include="AntColonyAlgorithm\AntColonyAlgorithm.cpp" />
     <ClCompile Include="AntColonySDN.cpp" />
-    <ClCompile Include="DijkstraAlgorithm.cpp" />
+    <ClCompile Include="DataManagement\DataLoader.cpp" />
+    <ClCompile Include="DataManagement\Link.cpp" />
+    <ClCompile Include="DataManagement\NetworkStructure.cpp" />
+    <ClCompile Include="DataManagement\Node.cpp" />
+    <ClCompile Include="Utils\DijkstraAlgorithm.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ant.h" />
-    <ClInclude Include="AntColonyAlgorithm.h" />
-    <ClInclude Include="DijkstraAlgorithm.h" />
+    <ClInclude Include="AntColonyAlgorithm\Ant.h" />
+    <ClInclude Include="AntColonyAlgorithm\AntColonyAlgorithm.h" />
+    <ClInclude Include="DataManagement\DataLoader.h" />
+    <ClInclude Include="DataManagement\Link.h" />
+    <ClInclude Include="DataManagement\NetworkStructure.h" />
+    <ClInclude Include="DataManagement\Node.h" />
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml.hpp" />
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml_iterators.hpp" />
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml_print.hpp" />
+    <ClInclude Include="DataManagement\RAPIDXML\rapidxml_utils.hpp" />
+    <ClInclude Include="Utils\DijkstraAlgorithm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Resources\germany50.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
