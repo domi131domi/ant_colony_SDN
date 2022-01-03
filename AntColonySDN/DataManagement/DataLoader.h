@@ -5,6 +5,7 @@
 #include <fstream>
 #include <stdexcept>
 #include <sstream>
+#include "NetworkStructure.h"
 
 using namespace rapidxml;
 
@@ -13,7 +14,7 @@ class DataLoader
 public:
 	DataLoader(const std::string path);
 	DataLoader();
-	void LoadXml();
+	NetworkStructure* LoadXml();
 private:
 	std::string path;
 	std::string rawData;

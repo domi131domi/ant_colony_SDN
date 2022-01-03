@@ -9,20 +9,15 @@ DataLoader::DataLoader()
 {
 }
 
-void DataLoader::LoadXml()
+NetworkStructure* DataLoader::LoadXml()
 {
 	LoadFile();
 
 	xml_document<> doc;
 	doc.parse<0>(&rawData[0]);
-	std::cout << doc.first_node()->name() << std::endl;
-	std::cout << doc.first_node()->value() << std::endl;
-	xml_node<> *structure = doc.first_node()->first_node();
-	xml_node<> *nodes = structure->first_node("nodes");
-	std::cout << nodes->name() << std::endl;
-	std::cout << nodes->first_attribute()->name() << std::endl;
-	std::cout << nodes->first_attribute()->value() << std::endl;
+	return new NetworkStructure(&doc);
 }
+
 
 void DataLoader::LoadFile()
 {

@@ -8,7 +8,7 @@ int main()
 		std::cout << "Witaj projekcie!\n";
 
 		DataLoader loader("../AntColonySDN/Resources/germany50.xml");
-		loader.LoadXml();
+		NetworkStructure* network = loader.LoadXml();
 
 
 	}
