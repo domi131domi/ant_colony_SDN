@@ -31,7 +31,6 @@ NetworkStructure::NetworkStructure(xml_document<>* doc)
 			//czy to sa sieci dwukierunkowe ???? ^^^^
 			current_link = current_link->next_sibling();
 		}
-
 	}
 	catch (std::exception ex)
 	{

@@ -3,6 +3,7 @@
 #include "Node.h"
 #include <string>
 #include "RAPIDXML/rapidxml.hpp"
+#include <stdexcept>
 
 using namespace rapidxml;
 
