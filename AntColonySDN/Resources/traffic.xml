@@ -1,0 +1,12 @@
+<traffic_list>
+  <traffic>
+    <source>Augsburg</source>
+    <target>Ulm</target>
+    <value>5</value>
+  </traffic>
+  <traffic>
+    <source>Freiburg</source>
+    <target>Konstanz</target>
+    <value>10</value>
+  </traffic>
+</traffic_list>

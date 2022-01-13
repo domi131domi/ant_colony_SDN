@@ -173,6 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resources\germany50.xml" />
+    <Xml Include="Resources\traffic.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

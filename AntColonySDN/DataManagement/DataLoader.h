@@ -14,11 +14,12 @@ class DataLoader
 public:
 	DataLoader(const std::string path);
 	DataLoader();
-	NetworkStructure* LoadXml();
+	xml_document<>* LoadXml();
+	xml_document<>* LoadXml(std::string path);
+	
 private:
 	std::string path;
-	std::string rawData;
 
-	void LoadFile();
+	std::string LoadFile(std::string path);
 };
 

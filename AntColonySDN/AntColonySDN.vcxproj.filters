@@ -88,5 +88,8 @@
     <Xml Include="Resources\germany50.xml">
       <Filter>Resource Files</Filter>
     </Xml>
+    <Xml Include="Resources\traffic.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

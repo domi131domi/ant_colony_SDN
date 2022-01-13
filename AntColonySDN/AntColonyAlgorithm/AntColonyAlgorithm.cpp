@@ -27,11 +27,10 @@ std::vector<Node*>::iterator AntColonyAlgorithm::findSmallestUnvisited(std::vect
 	return res;
 }
 
-//naiwne w ... bardzo
 std::map<Node*, DataTable> AntColonyAlgorithm::findDjikstraPath(Node* start, NetworkStructure* network)
 {
 	std::map<Node*, DataTable> data;
-	std::vector<Node*> unvisited, visited;	//najlepiej przerobic na heap
+	std::vector<Node*> unvisited, visited;	//trzeba przerobic na heap bo tak jest O(n^2)
 
 	for (auto &node : network->nodes)
 	{
@@ -44,13 +43,13 @@ std::map<Node*, DataTable> AntColonyAlgorithm::findDjikstraPath(Node* start, Net
 	while(unvisited.size() > 0)
 	{
 		std::vector<Node*>::iterator min = findSmallestUnvisited(unvisited, data);
-		for (Link link : (*min)->links)
+		for (std::pair<Node*,Link> link : (*min)->links)
 		{
-			float current_distance = data[*min].minimum_distance + link.capacity;
-			if (data[link.destination].minimum_distance < 0 || data[link.destination].minimum_distance > current_distance)
+			float current_distance = data[*min].minimum_distance + link.second.current_traffic;
+			if (data[link.first].minimum_distance < 0 || data[link.first].minimum_distance > current_distance)
 			{
-				data[link.destination].minimum_distance = current_distance;
-				data[link.destination].previous_node = *min;
+				data[link.first].minimum_distance = current_distance;
+				data[link.first].previous_node = *min;
 			}
 		}
 		unvisited.erase(min);
