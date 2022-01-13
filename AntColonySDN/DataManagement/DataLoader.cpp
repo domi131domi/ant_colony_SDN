@@ -9,17 +9,24 @@ DataLoader::DataLoader()
 {
 }
 
-NetworkStructure* DataLoader::LoadXml()
+xml_document<>* DataLoader::LoadXml()
 {
-	LoadFile();
+	std::string* rawData = new std::string(LoadFile(path));
+	xml_document<>* doc = new xml_document<>();
+	doc->parse<0>(&(*rawData)[0]);
+	return doc;
+}
 
-	xml_document<> doc;
-	doc.parse<0>(&rawData[0]);
-	return new NetworkStructure(&doc);
+xml_document<>* DataLoader::LoadXml(std::string path)
+{
+	std::string* rawData = new std::string(LoadFile(path));
+	xml_document<>* doc = new xml_document<>();
+	doc->parse<0>(&(*rawData)[0]);
+	return doc;
 }
 
 
-void DataLoader::LoadFile()
+std::string DataLoader::LoadFile(std::string path)
 {
 
 	std::ifstream indata(path);
@@ -28,7 +35,7 @@ void DataLoader::LoadFile()
 
 	std::stringstream buffer;
 	buffer << indata.rdbuf();
-	rawData = buffer.str();
+	return buffer.str();
 }
 
 

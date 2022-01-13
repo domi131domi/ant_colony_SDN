@@ -9,7 +9,8 @@ int main()
 		std::cout << "Witaj projekcie!\n";
 
 		DataLoader loader("../AntColonySDN/Resources/germany50.xml");
-		NetworkStructure* network = loader.LoadXml();
+		NetworkStructure* network = new NetworkStructure(loader.LoadXml());
+		network->ApplyTraffic(loader.LoadXml("../AntColonySDN/Resources/traffic.xml"));
 
 		AntColonyAlgorithm algorithm;
 		auto result = algorithm.findDjikstraPath(network->nodes["Aachen"], network);
