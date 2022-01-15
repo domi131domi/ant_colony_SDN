@@ -1,14 +1,24 @@
 #include "AntColonyAlgorithm.h"
+#include "Ant.h"
 
-void AntColonyAlgorithm::Iterate(unsigned iterations)
+void AntColonyAlgorithm::Iterate(unsigned iterations,Node* start, Node* destination, NetworkStructure* network)
 {
-	throw std::logic_error("Not implemented");
+	for (unsigned iterationCounter = 0; iterationCounter < iterations; iterationCounter++)
+	{
+		for (unsigned antCounter = 0; antCounter < ColonySize; antCounter++)
+		{
+
+		}
+	}
 }
 
-void AntColonyAlgorithm::MoveAnts()
+void AntColonyAlgorithm::ProcessNewAnt(Node* start, Node* destination, NetworkStructure* network)
 {
-	throw std::logic_error("Not implemented");
+	Ant ant(start, destination);
+	while (ant.Move()) {}
 }
+
+AntColonyAlgorithm::AntColonyAlgorithm(unsigned ColonySize) : ColonySize(ColonySize) {}
 
 std::vector<Node*>::iterator AntColonyAlgorithm::findSmallestUnvisited(std::vector<Node*>& nodes, std::map<Node*, DataTable> data)
 {

@@ -15,8 +15,11 @@ struct DataTable
 class AntColonyAlgorithm
 {
 public:
-	void Iterate(unsigned iterations);
-	void MoveAnts();
+	unsigned ColonySize = 1;
+
+	void Iterate(unsigned iterations, Node* start, Node* destination, NetworkStructure* network);
+	void ProcessNewAnt(Node* start, Node* destination, NetworkStructure* network);
+	AntColonyAlgorithm(unsigned ColonySize);
 	std::vector<Node*>::iterator findSmallestUnvisited(std::vector<Node*>& nodes, std::map<Node*, DataTable> data);
 	std::map<Node*, DataTable> findDjikstraPath(Node* start, NetworkStructure* network);
 };

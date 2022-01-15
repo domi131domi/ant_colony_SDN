@@ -12,8 +12,9 @@ int main()
 		NetworkStructure* network = new NetworkStructure(loader.LoadXml());
 		network->ApplyTraffic(loader.LoadXml("../AntColonySDN/Resources/traffic.xml"));
 
-		AntColonyAlgorithm algorithm;
-		auto result = algorithm.findDjikstraPath(network->nodes["Aachen"], network);
+		AntColonyAlgorithm algorithm(5);
+		//auto result = algorithm.findDjikstraPath(network->nodes["Aachen"], network);
+		algorithm.Iterate(2, network->nodes["Giessen"], network->nodes["Fulda"], network);
 
 	}
 	catch (std::exception ex)
