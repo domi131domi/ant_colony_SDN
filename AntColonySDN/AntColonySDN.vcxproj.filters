@@ -83,6 +83,9 @@
     <ClInclude Include="DataManagement\Node.h">
       <Filter>Header Files\DataManagement</Filter>
     </ClInclude>
+    <ClInclude Include="AntColonyAlgorithm\Utils.hpp">
+      <Filter>Source Files\AntColonyAlgorithm</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resources\germany50.xml">

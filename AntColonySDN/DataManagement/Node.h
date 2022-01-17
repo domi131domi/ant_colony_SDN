@@ -1,8 +1,8 @@
 #pragma once
 #include <vector>
 #include <string>
-#include <map>
 #include "Link.h"
+#include <map>
 
 class Node
 {

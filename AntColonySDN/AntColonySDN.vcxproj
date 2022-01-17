@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="AntColonyAlgorithm\Ant.h" />
     <ClInclude Include="AntColonyAlgorithm\AntColonyAlgorithm.h" />
+    <ClInclude Include="AntColonyAlgorithm\Utils.hpp" />
     <ClInclude Include="DataManagement\DataLoader.h" />
     <ClInclude Include="DataManagement\Link.h" />
     <ClInclude Include="DataManagement\NetworkStructure.h" />
