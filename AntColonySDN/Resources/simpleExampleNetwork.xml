@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network xmlns="http://sndlib.zib.de/network" version="1.0">
+  <networkStructure>
+    <nodes coordinatesType="geographical">
+      <node id="A">
+      </node>
+      <node id="B">
+      </node>
+      <node id="C">
+      </node>
+      <node id="D">
+      </node>
+      <node id="E">
+      </node>
+    </nodes>
+    <links>
+      <link>
+        <source>A</source>
+        <target>B</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>1.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+      <link>
+        <source>A</source>
+        <target>D</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>5.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+      <link>
+        <source>A</source>
+        <target>C</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>10.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+      <link>
+        <source>B</source>
+        <target>E</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>10.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+      <link>
+        <source>B</source>
+        <target>D</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>2.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+      <link>
+        <source>D</source>
+        <target>E</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>1.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+      <link>
+        <source>D</source>
+        <target>C</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>1.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+      <link>
+        <source>C</source>
+        <target>E</target>
+        <additionalModules>
+          <addModule>
+            <capacity>40.0</capacity>
+            <cost>4.0</cost>
+          </addModule>
+        </additionalModules>
+      </link>
+    </links>
+  </networkStructure>
+  <demands>
+  </demands>
+</network>

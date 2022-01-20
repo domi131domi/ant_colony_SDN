@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClCompile Include="AntColonyAlgorithm\Ant.cpp" />
     <ClCompile Include="AntColonyAlgorithm\AntColonyAlgorithm.cpp" />
+    <ClCompile Include="AntColonyAlgorithm\Utils.cpp" />
     <ClCompile Include="AntColonySDN.cpp" />
     <ClCompile Include="DataManagement\DataLoader.cpp" />
     <ClCompile Include="DataManagement\Link.cpp" />
@@ -162,7 +163,7 @@
   <ItemGroup>
     <ClInclude Include="AntColonyAlgorithm\Ant.h" />
     <ClInclude Include="AntColonyAlgorithm\AntColonyAlgorithm.h" />
-    <ClInclude Include="AntColonyAlgorithm\Utils.hpp" />
+    <ClInclude Include="AntColonyAlgorithm\Utils.h" />
     <ClInclude Include="DataManagement\DataLoader.h" />
     <ClInclude Include="DataManagement\Link.h" />
     <ClInclude Include="DataManagement\NetworkStructure.h" />
@@ -174,6 +175,8 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resources\germany50.xml" />
+    <Xml Include="Resources\simpleExampleNetwork.xml" />
+    <Xml Include="Resources\simpleExampleTraffic.xml" />
     <Xml Include="Resources\traffic.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

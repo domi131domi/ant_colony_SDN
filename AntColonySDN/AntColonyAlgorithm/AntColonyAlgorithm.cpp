@@ -1,5 +1,4 @@
 #include "AntColonyAlgorithm.h"
-#include "Ant.h"
 
 void AntColonyAlgorithm::Iterate(unsigned iterations,Node* start, Node* destination, NetworkStructure* network)
 {
@@ -14,8 +13,15 @@ void AntColonyAlgorithm::Iterate(unsigned iterations,Node* start, Node* destinat
 
 void AntColonyAlgorithm::ProcessNewAnt(Node* start, Node* destination, NetworkStructure* network)
 {
-	Ant ant(start, destination);
-	while (ant.Move()) {}
+	Ant ant(start, destination, network);
+	while (ant.Move()) {;}
+	if (bestScore < 0 || bestScore > ant.finalScore)
+	{
+		bestScore = ant.finalScore;
+		bestPathX = ant.path;
+		bestPathX.push_back(destination);
+		bestPathY = ant.pathY;
+	}
 }
 
 AntColonyAlgorithm::AntColonyAlgorithm(unsigned ColonySize) : ColonySize(ColonySize) {}

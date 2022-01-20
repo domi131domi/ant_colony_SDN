@@ -1,8 +1,10 @@
 #include "Ant.h"
 
 bool Ant::Move()
-{ 
-	Node* current_node = start;
+{
+
+	if (current_node == start && !movingForward)
+		return false;
 
 	if (movingForward)
 	{
@@ -10,25 +12,35 @@ bool Ant::Move()
 		{
 			Node* chosen = ChooseLink(current_node);
 			path.push_back(current_node);
+			pathXpoints += current_node->links[chosen].cost;
 			current_node = chosen;
 		}
 		else
 		{
-			
+			std::map<Node*, Utils::DataTable> map = Utils::findDjikstraPaths(start, network, path);
+			pathY = Utils::createPath(map, start, destination);
+			float pathYPoints = map[destination].minimum_distance;
+			finalScore = Utils::costFunction(pathYPoints, pathXpoints);
+			pheromone = 1.0 / finalScore;
 			movingForward = false;
 		}
 	}
 	else
 	{
-
+		if (movingBackIterator < 0)
+			movingBackIterator = path.size() - 1;
+		Node* previous_node = path[movingBackIterator];
+		previous_node->links[current_node].pheromone = std::max(previous_node->links[current_node].pheromone, pheromone);
+		current_node = previous_node;
+		movingBackIterator--;
 	}
-	//return current == start
-	return false;
+
+	return true;
 }
 
 float Ant::CalculateHeuristic(Link link)
 {
-	return link.cost * 1 / link.pheromone;
+	return (1.0 / (link.cost + link.pheromone));
 }
 
 Node* Ant::ChooseLink(Node* current_node)
@@ -37,7 +49,7 @@ Node* Ant::ChooseLink(Node* current_node)
 	std::map<Node*, float> heuristics;
 	for (auto& link : current_node->links)
 	{
-		if (find(path.begin(), path.end(), link.first) == path.end())
+		if (path.begin() != path.end() && find(path.begin(), path.end(), link.first) != path.end())
 			continue;
 
 		heuristics[link.first] = CalculateHeuristic(link.second);
@@ -64,4 +76,4 @@ Node* Ant::ChooseLink(Node* current_node)
 	return last;
 }
 
-Ant::Ant(Node* start, Node* destination) : start(start), destination(destination), movingForward(true) {}
+Ant::Ant(Node* start, Node* destination, NetworkStructure* network) : start(start), destination(destination), movingForward(true), network(network), current_node(start) {}
