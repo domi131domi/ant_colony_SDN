@@ -9,12 +9,13 @@ int main()
 	{
 		std::cout << "Witaj projekcie!\n";
 		srand(time(NULL));
+		//srand(69420);
 		DataLoader loader("../AntColonySDN/Resources/simpleExampleNetwork.xml");
 		NetworkStructure* network = new NetworkStructure(loader.LoadXml());
 		network->ApplyTraffic(loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml"));
 
 		AntColonyAlgorithm algorithm(5);
-		algorithm.Iterate(1000, network->nodes["A"], network->nodes["E"], network);
+		algorithm.Iterate(1, network->nodes["A"], network->nodes["E"], network);
 
 		std::cout << "Best score: " << algorithm.bestScore << std::endl;
 

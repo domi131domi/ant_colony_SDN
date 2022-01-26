@@ -16,6 +16,5 @@ public:
 	void LoadLinks(rapidxml::xml_node<>* xml_structure);
 	void LoadNodes(rapidxml::xml_node<>* xml_structure);
 	~NetworkStructure();
-
 };
 
