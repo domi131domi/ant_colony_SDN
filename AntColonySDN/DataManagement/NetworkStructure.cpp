@@ -32,6 +32,8 @@ void NetworkStructure::ApplyTraffic(xml_document<>* doc)
 			nodes[target]->links[nodes[source]].current_traffic = demandValue;
 			current_traffic = current_traffic->next_sibling();
 		}
+		//delete xml_traffic_list;
+		//delete doc->first_node("traffic_list");
 	}
 	catch(std::exception ex)
 	{
@@ -74,5 +76,11 @@ void NetworkStructure::LoadNodes(rapidxml::xml_node<>* xml_structure)
 
 NetworkStructure::~NetworkStructure()
 {
-	//clean map
+	std::map<std::string, Node*>::iterator it;
+
+	for (it = this->nodes.begin(); it != this->nodes.end(); it++)
+	{
+		delete it->second;
+		//delete 
+	}
 }

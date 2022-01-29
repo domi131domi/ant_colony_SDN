@@ -1,6 +1,6 @@
 #include "AntColonyAlgorithm.h"
 
-void AntColonyAlgorithm::Iterate(unsigned iterations,Node* start, Node* destination, NetworkStructure* network)
+void AntColonyAlgorithm::Iterate(unsigned iterations, Node* start, Node* destination, NetworkStructure* network)
 {
 	for (unsigned iterationCounter = 0; iterationCounter < iterations; iterationCounter++)
 	{
@@ -15,7 +15,7 @@ void AntColonyAlgorithm::Iterate(unsigned iterations,Node* start, Node* destinat
 void AntColonyAlgorithm::ProcessNewAnt(Node* start, Node* destination, NetworkStructure* network)
 {
 	Ant ant(start, destination, network);
-	while (ant.Move()) {;}
+	while (ant.Move()) { ; }
 	if (bestScore < 0 || bestScore > ant.finalScore)
 	{
 		bestScore = ant.finalScore;

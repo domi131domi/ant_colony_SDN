@@ -54,6 +54,9 @@
     <ClCompile Include="AntColonyAlgorithm\Ant.cpp">
       <Filter>Source Files\AntColonyAlgorithm</Filter>
     </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AntColonyAlgorithm\AntColonyAlgorithm.h">
@@ -103,6 +106,11 @@
     <Xml Include="Resources\simpleExampleTraffic.xml">
       <Filter>Resource Files</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\ExampleTraffic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\ExampleTraffic.png">

@@ -14,12 +14,13 @@ class DataLoader
 public:
 	DataLoader(const std::string path);
 	DataLoader();
-	xml_document<>* LoadXml();
-	xml_document<>* LoadXml(std::string path);
+
+	// zwracana para wskaŸników ze wzglêdu na poŸniejsz¹ koniecznoœæ zwolnienia pamiêci
+	std::pair<xml_document<>*, std::string*> LoadXml();
+	std::pair<xml_document<>*, std::string*> LoadXml(std::string path);
 	
 private:
 	std::string path;
-
 	std::string LoadFile(std::string path);
 };
 
