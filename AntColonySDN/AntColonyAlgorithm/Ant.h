@@ -24,6 +24,5 @@ public:
 	std::vector<Node*> path;
 	std::vector<Node*> pathY;
 	float finalScore = 0;
-	~Ant();
 };
 

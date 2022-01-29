@@ -18,6 +18,5 @@ public:
 	float bestScore = -1;
 	std::vector<Node*> bestPathX;
 	std::vector<Node*> bestPathY;
-	~AntColonyAlgorithm();
 };
 
