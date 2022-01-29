@@ -55,7 +55,7 @@ public:
 			std::vector<Node*>::iterator min = findSmallestUnvisited(unvisited, data);
 			for (std::pair<Node*, Link> link : (*min)->links)
 			{
-				float traffic = link.second.current_traffic;
+				float traffic = link.second.cost;
 				if (find(pathX.begin(), pathX.end(), link.first) != pathX.end())
 					traffic += MAX_TRAFFIC;
 
@@ -72,9 +72,9 @@ public:
 		return data;
 	}
 
-	static float costFunction(float pathYPoints, float pathXPoints)
+	static float costFunction(float pathYPoints, float yWeight, float pathXPoints, float xWeight)
 	{
-		return (pathYPoints + pathXPoints);
+		return (yWeight / pathYPoints) + xWeight*(exp(pathXPoints));
 	}
 
 	

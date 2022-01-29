@@ -28,12 +28,14 @@ void NetworkStructure::ApplyTraffic(xml_document<>* doc)
 			std::string trafficValueString = current_traffic->first_node("value")->value();
 			float demandValue = std::stof(trafficValueString);
 
-			nodes[source]->links[nodes[target]].current_traffic = demandValue;
-			nodes[target]->links[nodes[source]].current_traffic = demandValue;
+			nodes[source]->links[nodes[target]].current_usage = demandValue;
+			nodes[target]->links[nodes[source]].current_usage = demandValue;
+
+			nodes[source]->links[nodes[target]].usage_percentage = demandValue / nodes[source]->links[nodes[target]].capacity;
+			nodes[target]->links[nodes[source]].usage_percentage = demandValue / nodes[target]->links[nodes[source]].capacity;
+
 			current_traffic = current_traffic->next_sibling();
 		}
-		//delete xml_traffic_list;
-		//delete doc->first_node("traffic_list");
 	}
 	catch(std::exception ex)
 	{

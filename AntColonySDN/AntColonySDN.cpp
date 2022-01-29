@@ -17,17 +17,17 @@ int main()
 		network->ApplyTraffic(doc2.first);
 
 		AntColonyAlgorithm algorithm(5);
-		algorithm.Iterate(1000, network->nodes["A"], network->nodes["E"], network);
+		algorithm.Iterate(10000, network->nodes["A"], network->nodes["E"], network);
 
 		std::cout << "Best score: " << algorithm.bestScore << std::endl;
 
-		std::cout << "Best path x: " << algorithm.bestPathX[0]->id;
+		std::cout << "Best path Ants: " << algorithm.bestPathX[0]->id;
 		for (int i = 1; i < algorithm.bestPathX.size(); i++)
 		{
 			std::cout << " -> " << algorithm.bestPathX[i]->id;
 		}
 		std::cout << std::endl;
-		std::cout << "Best path y: " << algorithm.bestPathY[algorithm.bestPathY.size() - 1]->id;
+		std::cout << "Best path Dijkstra: " << algorithm.bestPathY[algorithm.bestPathY.size() - 1]->id;
 		for (int i = 1; i < algorithm.bestPathY.size(); i++)
 		{
 			std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;

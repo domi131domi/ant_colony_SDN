@@ -1,4 +1,5 @@
 #include "Ant.h"
+#include <math.h>
 
 bool Ant::Move()
 {
@@ -12,7 +13,7 @@ bool Ant::Move()
 		{
 			Node* chosen = ChooseLink(current_node);
 			path.push_back(current_node);
-			pathXpoints += current_node->links[chosen].cost;
+			pathXpoints += log(1 - current_node->links[chosen].usage_percentage);
 			current_node = chosen;
 		}
 		else
@@ -20,8 +21,8 @@ bool Ant::Move()
 			std::map<Node*, Utils::DataTable> map = Utils::findDjikstraPaths(start, network, path);
 			pathY = Utils::createPath(map, start, destination);
 			float pathYPoints = map[destination].minimum_distance;
-			finalScore = Utils::costFunction(pathYPoints, pathXpoints);
-			pheromone = 1.0 / finalScore;
+			finalScore = Utils::costFunction(pathYPoints, Y_WEIGHT, pathXpoints, X_WEIGHT);
+			pheromone = finalScore;
 			movingForward = false;
 		}
 	}
@@ -40,7 +41,7 @@ bool Ant::Move()
 
 float Ant::CalculateHeuristic(Link link)
 {
-	return (1.0 / (link.cost + link.pheromone));
+	return (X_WEIGHT * link.usage_percentage + link.pheromone);
 }
 
 Node* Ant::ChooseLink(Node* current_node)
