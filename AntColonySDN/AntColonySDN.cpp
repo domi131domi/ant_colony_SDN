@@ -1,20 +1,35 @@
 #include <iostream>
 #include "DataManagement/DataLoader.h"
 #include "AntColonyAlgorithm/AntColonyAlgorithm.h"
+#include "Time.h"
 
 int main()
 {
 	try
 	{
 		std::cout << "Witaj projekcie!\n";
-
-		DataLoader loader("../AntColonySDN/Resources/germany50.xml");
+		srand(time(NULL));
+		//srand(69420);
+		DataLoader loader("../AntColonySDN/Resources/simpleExampleNetwork.xml");
 		NetworkStructure* network = new NetworkStructure(loader.LoadXml());
-		network->ApplyTraffic(loader.LoadXml("../AntColonySDN/Resources/traffic.xml"));
+		network->ApplyTraffic(loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml"));
 
-		AntColonyAlgorithm algorithm;
-		auto result = algorithm.findDjikstraPath(network->nodes["Aachen"], network);
+		AntColonyAlgorithm algorithm(5);
+		algorithm.Iterate(1, network->nodes["A"], network->nodes["E"], network);
 
+		std::cout << "Best score: " << algorithm.bestScore << std::endl;
+
+		std::cout << "Best path x: " << algorithm.bestPathX[0]->id;
+		for (int i = 1; i < algorithm.bestPathX.size(); i++)
+		{
+			std::cout << " -> " << algorithm.bestPathX[i]->id;
+		}
+		std::cout << std::endl;
+		std::cout << "Best path y: " << algorithm.bestPathY[algorithm.bestPathY.size() - 1]->id;
+		for (int i = 1; i < algorithm.bestPathY.size(); i++)
+		{
+			std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
+		}
 	}
 	catch (std::exception ex)
 	{

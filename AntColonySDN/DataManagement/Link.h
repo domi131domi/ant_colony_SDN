@@ -9,6 +9,7 @@ public:
 	float capacity;
 	float cost;
 	float current_traffic;
+	float pheromone;
 	bool exist_in_cost_path;
 	Link();
 	Link(float capactiy, float cost);

@@ -5,19 +5,18 @@
 #include <map>
 #include "../DataManagement/Node.h"
 #include "../DataManagement/NetworkStructure.h"
-
-struct DataTable
-{
-	float minimum_distance;
-	Node* previous_node;
-};
+#include "Ant.h"
 
 class AntColonyAlgorithm
 {
 public:
-	void Iterate(unsigned iterations);
-	void MoveAnts();
-	std::vector<Node*>::iterator findSmallestUnvisited(std::vector<Node*>& nodes, std::map<Node*, DataTable> data);
-	std::map<Node*, DataTable> findDjikstraPath(Node* start, NetworkStructure* network);
+	unsigned ColonySize = 1;
+
+	void Iterate(unsigned iterations, Node* start, Node* destination, NetworkStructure* network);
+	void ProcessNewAnt(Node* start, Node* destination, NetworkStructure* network);
+	AntColonyAlgorithm(unsigned ColonySize);
+	float bestScore = -1;
+	std::vector<Node*> bestPathX;
+	std::vector<Node*> bestPathY;
 };
 

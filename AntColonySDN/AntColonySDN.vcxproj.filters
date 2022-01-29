@@ -36,9 +36,6 @@
     <ClCompile Include="DataManagement\DataLoader.cpp">
       <Filter>Source Files\DataMangement</Filter>
     </ClCompile>
-    <ClCompile Include="AntColonyAlgorithm\Ant.cpp">
-      <Filter>Source Files\AntColonyAlgorithm</Filter>
-    </ClCompile>
     <ClCompile Include="AntColonyAlgorithm\AntColonyAlgorithm.cpp">
       <Filter>Source Files\AntColonyAlgorithm</Filter>
     </ClCompile>
@@ -51,11 +48,14 @@
     <ClCompile Include="DataManagement\Node.cpp">
       <Filter>Source Files\DataMangement</Filter>
     </ClCompile>
+    <ClCompile Include="AntColonyAlgorithm\Utils.cpp">
+      <Filter>Source Files\AntColonyAlgorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="AntColonyAlgorithm\Ant.cpp">
+      <Filter>Source Files\AntColonyAlgorithm</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AntColonyAlgorithm\Ant.h">
-      <Filter>Header Files\AntColonyAlgorithm</Filter>
-    </ClInclude>
     <ClInclude Include="AntColonyAlgorithm\AntColonyAlgorithm.h">
       <Filter>Header Files\AntColonyAlgorithm</Filter>
     </ClInclude>
@@ -83,6 +83,12 @@
     <ClInclude Include="DataManagement\Node.h">
       <Filter>Header Files\DataManagement</Filter>
     </ClInclude>
+    <ClInclude Include="AntColonyAlgorithm\Utils.h">
+      <Filter>Header Files\AntColonyAlgorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="AntColonyAlgorithm\Ant.h">
+      <Filter>Header Files\AntColonyAlgorithm</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resources\germany50.xml">
@@ -91,5 +97,16 @@
     <Xml Include="Resources\traffic.xml">
       <Filter>Resource Files</Filter>
     </Xml>
+    <Xml Include="Resources\simpleExampleNetwork.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="Resources\simpleExampleTraffic.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\ExampleTraffic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

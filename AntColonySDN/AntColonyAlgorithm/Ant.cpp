@@ -1,6 +1,79 @@
 #include "Ant.h"
 
-void Ant::Move()
+bool Ant::Move()
 {
-	throw std::logic_error("Not implemented");
+
+	if (current_node == start && !movingForward)
+		return false;
+
+	if (movingForward)
+	{
+		if (current_node != destination)
+		{
+			Node* chosen = ChooseLink(current_node);
+			path.push_back(current_node);
+			pathXpoints += current_node->links[chosen].cost;
+			current_node = chosen;
+		}
+		else
+		{
+			std::map<Node*, Utils::DataTable> map = Utils::findDjikstraPaths(start, network, path);
+			pathY = Utils::createPath(map, start, destination);
+			float pathYPoints = map[destination].minimum_distance;
+			finalScore = Utils::costFunction(pathYPoints, pathXpoints);
+			pheromone = 1.0 / finalScore;
+			movingForward = false;
+		}
+	}
+	else
+	{
+		if (movingBackIterator < 0)
+			movingBackIterator = path.size() - 1;
+		Node* previous_node = path[movingBackIterator];
+		previous_node->links[current_node].pheromone = std::max(previous_node->links[current_node].pheromone, pheromone);
+		current_node = previous_node;
+		movingBackIterator--;
+	}
+
+	return true;
 }
+
+float Ant::CalculateHeuristic(Link link)
+{
+	return (1.0 / (link.cost + link.pheromone));
+}
+
+Node* Ant::ChooseLink(Node* current_node)
+{
+	float sumHeuristic = 0;
+	std::map<Node*, float> heuristics;
+	for (auto& link : current_node->links)
+	{
+		if (path.begin() != path.end() && find(path.begin(), path.end(), link.first) != path.end())
+			continue;
+
+		heuristics[link.first] = CalculateHeuristic(link.second);
+		sumHeuristic += heuristics[link.first];
+	}
+
+	float random = (float)rand() / (float)RAND_MAX;
+
+	float lastValue = 0;
+	Node* last = current_node;
+	for (auto& heuristic : heuristics)
+	{
+		float value = lastValue + (heuristic.second / sumHeuristic);
+		lastValue = value;
+
+		if (random <= value)
+		{
+			return heuristic.first;
+		}
+
+		last = heuristic.first;
+	}
+
+	return last;
+}
+
+Ant::Ant(Node* start, Node* destination, NetworkStructure* network) : start(start), destination(destination), movingForward(true), network(network), current_node(start) {}
