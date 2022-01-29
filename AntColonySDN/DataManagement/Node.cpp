@@ -16,10 +16,10 @@ Node::~Node()
 	//std::cout << globalCounter++ << " ";
 	//std::cout << this->links.size() << std::endl;
 
-	/*for (it = this->links.begin(); it != this->links.end(); it++)
-	{
-		delete it->first;
-	}
-	std::cout << "checkpoint" << std::endl;*/
+	//for (it = this->links.begin(); it != this->links.end(); it++)
+	//{
+	//	delete it->first;
+	//}
+	//std::cout << "checkpoint" << std::endl;
 
 }

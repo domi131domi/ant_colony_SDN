@@ -19,10 +19,11 @@ BOOST_AUTO_TEST_CASE(memoryLeaksTest)
 	std::cout << "Witaj projekcie!\n";
 	srand(time(NULL));
 	DataLoader loader("../AntColonySDN/Resources/simpleExampleNetwork.xml");
-	xml_document<>* doc = loader.LoadXml();
-	NetworkStructure* network = new NetworkStructure(doc);
-	xml_document<>* doc2 = loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml");
-	network->ApplyTraffic(doc2);
+	std::pair<xml_document<>*, std::string*> doc1 = loader.LoadXml();
+	//xml_document<>* doc = loader.LoadXml();
+	NetworkStructure* network = new NetworkStructure(doc1.first);
+	std::pair<xml_document<>*, std::string*> doc2 = loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml");
+	network->ApplyTraffic(doc2.first);
 
 	AntColonyAlgorithm algorithm(5);
 	algorithm.Iterate(1000, network->nodes["A"], network->nodes["E"], network);
@@ -40,8 +41,12 @@ BOOST_AUTO_TEST_CASE(memoryLeaksTest)
 	{
 		std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
 	}
-	delete doc;
-	delete doc2;
+	doc1.first->clear();
+	doc2.first->clear();
+	delete doc1.first;
+	delete doc1.second;
+	delete doc2.first;
+	delete doc2.second;
 	delete network;
 }
 
