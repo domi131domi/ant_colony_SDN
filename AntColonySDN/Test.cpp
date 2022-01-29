@@ -1,6 +1,5 @@
 #define BOOST_TEST_MODULE mytests
 #include <boost/test/included/unit_test.hpp>
-
 #include <iostream>
 #include "DataManagement/DataLoader.h"
 #include "AntColonyAlgorithm/AntColonyAlgorithm.h"

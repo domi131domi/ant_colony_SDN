@@ -10,8 +10,7 @@ Node::Node(std::string id)
 
 Node::~Node()
 {
-
-	// jakiekolwiek odniesienie do this skutkuje wyjebaniem stackoverflow
+	// jakiekolwiek odniesienie do this skutkuje wywaleniem stackoverflow
 
 	//std::map<Node*, Link>::iterator it;
 	//std::cout << globalCounter++ << " ";
