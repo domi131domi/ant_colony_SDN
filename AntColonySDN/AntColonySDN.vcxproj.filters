@@ -54,6 +54,9 @@
     <ClCompile Include="AntColonyAlgorithm\Ant.cpp">
       <Filter>Source Files\AntColonyAlgorithm</Filter>
     </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AntColonyAlgorithm\AntColonyAlgorithm.h">

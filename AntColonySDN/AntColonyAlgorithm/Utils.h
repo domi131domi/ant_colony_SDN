@@ -68,7 +68,14 @@ public:
 			}
 			unvisited.erase(min);
 		}
-
+		/*for (Node* unvis : unvisited)
+		{
+			delete(unvis);
+		}
+		for (Node* vis : visited)
+		{
+			delete(vis);
+		}*/
 		return data;
 	}
 

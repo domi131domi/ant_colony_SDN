@@ -74,5 +74,11 @@ void NetworkStructure::LoadNodes(rapidxml::xml_node<>* xml_structure)
 
 NetworkStructure::~NetworkStructure()
 {
-	//clean map
+	std::map<std::string, Node*>::iterator it;
+
+	for (it = this->nodes.begin(); it != this->nodes.end(); it++)
+	{
+		delete it->second;
+		//delete 
+	}
 }

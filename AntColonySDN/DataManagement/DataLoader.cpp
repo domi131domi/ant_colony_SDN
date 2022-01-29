@@ -14,6 +14,8 @@ xml_document<>* DataLoader::LoadXml()
 	std::string* rawData = new std::string(LoadFile(path));
 	xml_document<>* doc = new xml_document<>();
 	doc->parse<0>(&(*rawData)[0]);
+	//delete rawData;
+	//std::cout << *rawData << std::endl;
 	return doc;
 }
 
@@ -22,6 +24,8 @@ xml_document<>* DataLoader::LoadXml(std::string path)
 	std::string* rawData = new std::string(LoadFile(path));
 	xml_document<>* doc = new xml_document<>();
 	doc->parse<0>(&(*rawData)[0]);
+	//delete rawData;
+	//std::cout << *rawData << std::endl;
 	return doc;
 }
 

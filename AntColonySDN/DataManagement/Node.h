@@ -10,5 +10,6 @@ public:
 	std::string id;
 	std::map<Node*, Link> links;
 	Node(std::string id);
+	~Node();
 };
 

@@ -10,7 +10,8 @@ int main()
 		std::cout << "Witaj projekcie!\n";
 		srand(time(NULL));
 		DataLoader loader("../AntColonySDN/Resources/simpleExampleNetwork.xml");
-		NetworkStructure* network = new NetworkStructure(loader.LoadXml());
+		xml_document<>* doc = loader.LoadXml();
+		NetworkStructure* network = new NetworkStructure(doc);
 		network->ApplyTraffic(loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml"));
 
 		AntColonyAlgorithm algorithm(5);
@@ -29,6 +30,7 @@ int main()
 		{
 			std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
 		}
+
 	}
 	catch (std::exception ex)
 	{

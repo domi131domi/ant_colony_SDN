@@ -3,8 +3,9 @@
 bool Ant::Move()
 {
 
-	if (current_node == start && !movingForward)
+	if (current_node == start && !movingForward) 
 		return false;
+		
 
 	if (movingForward)
 	{
@@ -77,3 +78,19 @@ Node* Ant::ChooseLink(Node* current_node)
 }
 
 Ant::Ant(Node* start, Node* destination, NetworkStructure* network) : start(start), destination(destination), movingForward(true), network(network), current_node(start) {}
+
+Ant::~Ant()
+{
+	//delete start;
+	//delete destination;
+	//delete network;
+	//delete current_node;
+	//for (Node* p : path) 
+	//{
+	//	delete p;
+	//}
+	//for (Node* p : pathY)
+	//{
+	//	delete p;
+	//}
+}

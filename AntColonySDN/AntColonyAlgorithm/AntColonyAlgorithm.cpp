@@ -1,6 +1,7 @@
 #include "AntColonyAlgorithm.h"
+#include <iostream>
 
-void AntColonyAlgorithm::Iterate(unsigned iterations,Node* start, Node* destination, NetworkStructure* network)
+void AntColonyAlgorithm::Iterate(unsigned iterations, Node* start, Node* destination, NetworkStructure* network)
 {
 	for (unsigned iterationCounter = 0; iterationCounter < iterations; iterationCounter++)
 	{
@@ -25,3 +26,18 @@ void AntColonyAlgorithm::ProcessNewAnt(Node* start, Node* destination, NetworkSt
 }
 
 AntColonyAlgorithm::AntColonyAlgorithm(unsigned ColonySize) : ColonySize(ColonySize) {}
+
+AntColonyAlgorithm::~AntColonyAlgorithm()
+{
+
+	//for (Node* path : bestPathX)
+	//{
+	//	if(path)
+	//		path->~Node();
+	//}
+	//for (Node* path : bestPathY)
+	//{
+	//	if (path)
+	//		path->~Node();
+	//}
+}
