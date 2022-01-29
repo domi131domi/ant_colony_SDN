@@ -252,6 +252,9 @@
     <Xml Include="Resources\simpleExampleTraffic.xml" />
     <Xml Include="Resources\traffic.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\ExampleTraffic.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -8,6 +8,7 @@ void AntColonyAlgorithm::Iterate(unsigned iterations, Node* start, Node* destina
 		for (unsigned antCounter = 0; antCounter < ColonySize; antCounter++)
 		{
 			ProcessNewAnt(start, destination, network);
+			//reset feromonow
 		}
 	}
 }
