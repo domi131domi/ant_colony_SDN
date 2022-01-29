@@ -32,6 +32,17 @@ int main()
 			std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
 		}
 
+		std::cout << "Best path x: " << algorithm.bestPathX[0]->id;
+		for (int i = 1; i < algorithm.bestPathX.size(); i++)
+		{
+			std::cout << " -> " << algorithm.bestPathX[i]->id;
+		}
+		std::cout << std::endl;
+		std::cout << "Best path y: " << algorithm.bestPathY[algorithm.bestPathY.size() - 1]->id;
+		for (int i = 1; i < algorithm.bestPathY.size(); i++)
+		{
+			std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
+		}
 	}
 	catch (std::exception ex)
 	{

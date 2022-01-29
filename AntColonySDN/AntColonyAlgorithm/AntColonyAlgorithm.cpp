@@ -31,14 +31,4 @@ AntColonyAlgorithm::AntColonyAlgorithm(unsigned ColonySize) : ColonySize(ColonyS
 AntColonyAlgorithm::~AntColonyAlgorithm()
 {
 
-	//for (Node* path : bestPathX)
-	//{
-	//	if(path)
-	//		path->~Node();
-	//}
-	//for (Node* path : bestPathY)
-	//{
-	//	if (path)
-	//		path->~Node();
-	//}
 }
