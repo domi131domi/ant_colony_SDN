@@ -70,7 +70,7 @@
         <additionalModules>
           <addModule>
             <capacity>40.0</capacity>
-            <cost>1.0</cost>
+            <cost>2.0</cost>
           </addModule>
         </additionalModules>
       </link>
@@ -90,7 +90,7 @@
         <additionalModules>
           <addModule>
             <capacity>40.0</capacity>
-            <cost>4.0</cost>
+            <cost>10.0</cost>
           </addModule>
         </additionalModules>
       </link>

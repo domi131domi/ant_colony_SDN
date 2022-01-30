@@ -6,7 +6,7 @@
 #include <random>
 #include "../DataManagement/NetworkStructure.h"
 
-const float Y_WEIGHT = 10.0;
+const float Y_WEIGHT = 1.0;
 const float X_WEIGHT = 1.0;
 
 class Ant

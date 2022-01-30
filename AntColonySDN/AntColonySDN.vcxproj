@@ -252,9 +252,12 @@
     <ClInclude Include="DataManagement\RAPIDXML\rapidxml_utils.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <Xml Include="germany50traffic.xml" />
     <Xml Include="Resources\germany50.xml" />
     <Xml Include="Resources\simpleExampleNetwork.xml" />
     <Xml Include="Resources\simpleExampleTraffic.xml" />
+    <Xml Include="Resources\testNetwork2.xml" />
+    <Xml Include="Resources\testTraffic2.xml" />
     <Xml Include="Resources\traffic.xml" />
   </ItemGroup>
   <ItemGroup>

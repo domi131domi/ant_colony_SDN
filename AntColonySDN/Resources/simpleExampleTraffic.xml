@@ -27,7 +27,7 @@
   <traffic>
     <source>D</source>
     <target>C</target>
-    <value>1</value>
+    <value>10</value>
   </traffic>
   <traffic>
     <source>D</source>

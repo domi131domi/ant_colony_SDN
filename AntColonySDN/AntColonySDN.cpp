@@ -9,15 +9,17 @@ int main()
 	{
 		std::cout << "Witaj projekcie!\n";
 		srand(time(NULL));
-		DataLoader loader("../AntColonySDN/Resources/simpleExampleNetwork.xml");
-		std::pair<xml_document<>*, std::string*> doc1 = loader.LoadXml();
-		//xml_document<>* doc = loader.LoadXml();
+		//DataLoader loader("../AntColonySDN/Resources/simpleExampleNetwork.xml");
+		DataLoader loader("../AntColonySDN/Resources/testNetwork2.xml");
+		std::pair<xml_document<>*, std::string*> doc1 = loader.LoadXml();;
 		NetworkStructure* network = new NetworkStructure(doc1.first);
-		std::pair<xml_document<>*, std::string*> doc2 = loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml");
+		//std::pair<xml_document<>*, std::string*> doc2 = loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml");
+		std::pair<xml_document<>*, std::string*> doc2 = loader.LoadXml("../AntColonySDN/Resources/testTraffic2.xml");
 		network->ApplyTraffic(doc2.first);
 
 		AntColonyAlgorithm algorithm(5);
-		algorithm.Iterate(10000, network->nodes["A"], network->nodes["E"], network);
+		//algorithm.Iterate(1000, network->nodes["A"], network->nodes["E"], network);
+		algorithm.Iterate(1000, network->nodes["A"], network->nodes["G"], network);
 
 		std::cout << "Best score: " << algorithm.bestScore << std::endl;
 

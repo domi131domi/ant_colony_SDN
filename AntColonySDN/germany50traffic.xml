@@ -1,0 +1,883 @@
+<links>
+	<link id="L1">
+		<source>Duesseldorf</source>
+		<target>Essen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L2">
+		<source>Dortmund</source>
+		<target>Essen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L3">
+		<source>Wesel</source>
+		<target>Essen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L4">
+		<source>Koeln</source>
+		<target>Duesseldorf</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L5">
+		<source>Aachen</source>
+		<target>Koeln</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L6">
+		<source>Koblenz</source>
+		<target>Koeln</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L7">
+		<source>Muenster</source>
+		<target>Dortmund</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L8">
+		<source>Siegen</source>
+		<target>Dortmund</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L9">
+		<source>Kassel</source>
+		<target>Dortmund</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L10">
+		<source>Wesel</source>
+		<target>Aachen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L11">
+		<source>Trier</source>
+		<target>Aachen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L12">
+		<source>Bielefeld</source>
+		<target>Muenster</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L13">
+		<source>Osnabrueck</source>
+		<target>Muenster</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L14">
+		<source>Siegen</source>
+		<target>Koblenz</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L15">
+		<source>Frankfurt</source>
+		<target>Koblenz</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L16">
+		<source>Kaiserslautern</source>
+		<target>Koblenz</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L17">
+		<source>Trier</source>
+		<target>Koblenz</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L18">
+		<source>Bielefeld</source>
+		<target>Siegen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L19">
+		<source>Giessen</source>
+		<target>Siegen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L20">
+		<source>Oldenburg</source>
+		<target>Wesel</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L21">
+		<source>Norden</source>
+		<target>Wesel</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L22">
+		<source>Leipzig</source>
+		<target>Berlin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L23">
+		<source>Dresden</source>
+		<target>Berlin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L24">
+		<source>Schwerin</source>
+		<target>Berlin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L25">
+		<source>Magdeburg</source>
+		<target>Berlin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L26">
+		<source>Greifswald</source>
+		<target>Berlin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L27">
+		<source>Dresden</source>
+		<target>Leipzig</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L28">
+		<source>Erfurt</source>
+		<target>Leipzig</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L29">
+		<source>Magdeburg</source>
+		<target>Leipzig</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L30">
+		<source>Bayreuth</source>
+		<target>Leipzig</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L31">
+		<source>Erfurt</source>
+		<target>Dresden</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L32">
+		<source>Chemnitz</source>
+		<target>Dresden</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L33">
+		<source>Chemnitz</source>
+		<target>Erfurt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L34">
+		<source>Kassel</source>
+		<target>Erfurt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L35">
+		<source>Wuerzburg</source>
+		<target>Erfurt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L36">
+		<source>Bayreuth</source>
+		<target>Chemnitz</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L37">
+		<source>Magdeburg</source>
+		<target>Schwerin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L38">
+		<source>Greifswald</source>
+		<target>Schwerin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L39">
+		<source>Hamburg</source>
+		<target>Schwerin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L40">
+		<source>Kiel</source>
+		<target>Schwerin</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L41">
+		<source>Braunschweig</source>
+		<target>Magdeburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L42">
+		<source>Kiel</source>
+		<target>Hamburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L43">
+		<source>Hannover</source>
+		<target>Hamburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L44">
+		<source>Braunschweig</source>
+		<target>Hamburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L45">
+		<source>Oldenburg</source>
+		<target>Bremen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L46">
+		<source>Bremerhaven</source>
+		<target>Bremen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L47">
+		<source>Hannover</source>
+		<target>Bremen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L48">
+		<source>Flensburg</source>
+		<target>Kiel</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L49">
+		<source>Norden</source>
+		<target>Oldenburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L50">
+		<source>Osnabrueck</source>
+		<target>Oldenburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L51">
+		<source>Bremerhaven</source>
+		<target>Flensburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L52">
+		<source>Bielefeld</source>
+		<target>Hannover</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L53">
+		<source>Braunschweig</source>
+		<target>Hannover</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L54">
+		<source>Osnabrueck</source>
+		<target>Hannover</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L55">
+		<source>Braunschweig</source>
+		<target>Bielefeld</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L56">
+		<source>Kassel</source>
+		<target>Braunschweig</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L57">
+		<source>Giessen</source>
+		<target>Kassel</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L58">
+		<source>Fulda</source>
+		<target>Kassel</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L59">
+		<source>Darmstadt</source>
+		<target>Frankfurt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L60">
+		<source>Giessen</source>
+		<target>Frankfurt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L61">
+		<source>Fulda</source>
+		<target>Frankfurt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L62">
+		<source>Mannheim</source>
+		<target>Darmstadt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L63">
+		<source>Kaiserslautern</source>
+		<target>Darmstadt</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L64">
+		<source>Karlsruhe</source>
+		<target>Mannheim</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L65">
+		<source>Saarbruecken</source>
+		<target>Kaiserslautern</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L66">
+		<source>Karlsruhe</source>
+		<target>Kaiserslautern</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L67">
+		<source>Fulda</source>
+		<target>Giessen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L68">
+		<source>Saarbruecken</source>
+		<target>Trier</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L69">
+		<source>Wuerzburg</source>
+		<target>Fulda</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L70">
+		<source>Karlsruhe</source>
+		<target>Saarbruecken</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L71">
+		<source>Karlsruhe</source>
+		<target>Stuttgart</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L72">
+		<source>Ulm</source>
+		<target>Stuttgart</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L73">
+		<source>Konstanz</source>
+		<target>Stuttgart</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L74">
+		<source>Wuerzburg</source>
+		<target>Stuttgart</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L75">
+		<source>Freiburg</source>
+		<target>Karlsruhe</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L76">
+		<source>Augsburg</source>
+		<target>Ulm</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L77">
+		<source>Freiburg</source>
+		<target>Konstanz</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L78">
+		<source>Kempten</source>
+		<target>Konstanz</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L79">
+		<source>Augsburg</source>
+		<target>Muenchen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L80">
+		<source>Kempten</source>
+		<target>Muenchen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L81">
+		<source>Passau</source>
+		<target>Muenchen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L82">
+		<source>Nuernberg</source>
+		<target>Muenchen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L83">
+		<source>Regensburg</source>
+		<target>Muenchen</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L84">
+		<source>Wuerzburg</source>
+		<target>Augsburg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>4150.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L85">
+		<source>Regensburg</source>
+		<target>Passau</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L86">
+		<source>Bayreuth</source>
+		<target>Nuernberg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3290.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L87">
+		<source>Wuerzburg</source>
+		<target>Nuernberg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+	<link id="L88">
+		<source>Regensburg</source>
+		<target>Nuernberg</target>
+		<additionalModules>
+			<addModule>
+				<capacity>40.0</capacity>
+				<cost>3720.0</cost>
+			</addModule>
+		</additionalModules>
+	</link>
+</links>
+</networkStructure>

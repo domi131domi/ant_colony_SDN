@@ -1,5 +1,6 @@
 #include "Ant.h"
-#include <math.h>
+#include <cmath>
+#include <iostream>
 
 bool Ant::Move()
 {
@@ -23,6 +24,7 @@ bool Ant::Move()
 			float pathYPoints = map[destination].minimum_distance;
 			finalScore = Utils::costFunction(pathYPoints, Y_WEIGHT, pathXpoints, X_WEIGHT);
 			pheromone = finalScore;
+			//std::cout << pheromone << std::endl;
 			movingForward = false;
 		}
 	}
