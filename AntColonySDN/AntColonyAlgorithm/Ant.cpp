@@ -13,6 +13,8 @@ bool Ant::Move()
 		if (current_node != destination)
 		{
 			Node* chosen = ChooseLink(current_node);
+			if (current_node == chosen)
+				return false;
 			path.push_back(current_node);
 			pathXpoints += log(1 - current_node->links[chosen].usage_percentage);
 			current_node = chosen;
@@ -24,7 +26,7 @@ bool Ant::Move()
 			float pathYPoints = map[destination].minimum_distance;
 			finalScore = Utils::costFunction(pathYPoints, Y_WEIGHT, pathXpoints, X_WEIGHT);
 			pheromone = finalScore;
-			//std::cout << pheromone << std::endl;
+			std::cout << pheromone << std::endl;
 			movingForward = false;
 		}
 	}
