@@ -2,6 +2,9 @@
 #include "DataManagement/DataLoader.h"
 #include "AntColonyAlgorithm/AntColonyAlgorithm.h"
 #include "Time.h"
+#include "AntColonyAlgorithm/Ant.h"
+
+//std::vector<Node*> odwiedzoned;
 
 int main()
 {
@@ -10,18 +13,18 @@ int main()
 		std::cout << "Witaj projekcie!\n";
 		srand(time(NULL));
 		//DataLoader loader("../AntColonySDN/Resources/simpleExampleNetwork.xml");
-		DataLoader loader("../AntColonySDN/Resources/testNetwork2.xml");
+		DataLoader loader("../AntColonySDN/Resources/germany50.xml");
 		std::pair<xml_document<>*, std::string*> doc1 = loader.LoadXml();;
 		NetworkStructure* network = new NetworkStructure(doc1.first);
 		//std::pair<xml_document<>*, std::string*> doc2 = loader.LoadXml("../AntColonySDN/Resources/simpleExampleTraffic.xml");
-		std::pair<xml_document<>*, std::string*> doc2 = loader.LoadXml("../AntColonySDN/Resources/testTraffic2.xml");
+		std::pair<xml_document<>*, std::string*> doc2 = loader.LoadXml("../AntColonySDN/Resources/germany50traffic.xml");
 		network->ApplyTraffic(doc2.first);
 
 		AntColonyAlgorithm algorithm(5);
 		//algorithm.Iterate(1000, network->nodes["A"], network->nodes["E"], network);
-		for (int i = 0; i < 100; i++)
+		for (int i = 0; i < 10; i++)
 		{
-			algorithm.Iterate(1, network->nodes["A"], network->nodes["G"], network);
+			algorithm.Iterate(100, network->nodes["Freiburg"], network->nodes["Flensburg"], network);
 
 			std::cout << "Best score: " << algorithm.bestScore << std::endl;
 
@@ -37,6 +40,10 @@ int main()
 				std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
 			}
 			std::cout << std::endl;
+		}
+
+		for (int i = 0; i < odwiedzoned.size(); i++) {
+			std::cout << odwiedzoned[i]->id << std::endl;
 		}
 		doc1.first->clear();
 		doc2.first->clear();

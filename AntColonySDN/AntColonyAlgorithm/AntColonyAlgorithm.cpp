@@ -8,7 +8,7 @@ void AntColonyAlgorithm::Iterate(unsigned iterations, Node* start, Node* destina
 		{
 			ProcessNewAnt(start, destination, network);
 		}
-		EvaporatePheromone(network);
+		//EvaporatePheromone(network);
 	}
 }
 

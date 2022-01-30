@@ -2,6 +2,16 @@
 #include <cmath>
 #include <iostream>
 
+std::vector<Node*> odwiedzoned;
+
+bool jest_odwiedzone(Node* miasto) {
+	for (int i = 0; i < odwiedzoned.size(); i++) {
+		if (odwiedzoned[i] == miasto)
+			return true;
+	}
+	return false;
+}
+
 bool Ant::Move()
 {
 
@@ -13,6 +23,8 @@ bool Ant::Move()
 		if (current_node != destination)
 		{
 			Node* chosen = ChooseLink(current_node);
+			if (!jest_odwiedzone(chosen))
+				odwiedzoned.push_back(chosen);
 			if (chosen == current_node)
 			{
 				dead = true;

@@ -7,7 +7,7 @@
 #include <map>
 #include "../DataManagement/Node.h"
 #include "../DataManagement/NetworkStructure.h"
-#define MAX_TRAFFIC 3000
+#define MAX_TRAFFIC 10000000
 
 class Utils
 {
@@ -74,6 +74,7 @@ public:
 
 	static float costFunction(float pathYPoints, float yWeight, float pathXPoints, float xWeight)
 	{
+						 //1                10 * 1-07  = 1-06    
 		return 1/((yWeight / pathYPoints) + xWeight*(exp(pathXPoints)));
 	}
 

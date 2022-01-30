@@ -106,13 +106,13 @@
     <Xml Include="Resources\simpleExampleTraffic.xml">
       <Filter>Resource Files</Filter>
     </Xml>
-    <Xml Include="germany50traffic.xml">
-      <Filter>Resource Files</Filter>
-    </Xml>
     <Xml Include="Resources\testNetwork2.xml">
       <Filter>Resource Files</Filter>
     </Xml>
     <Xml Include="Resources\testTraffic2.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="Resources\germany50traffic.xml">
       <Filter>Resource Files</Filter>
     </Xml>
   </ItemGroup>
