@@ -48,7 +48,7 @@ bool Ant::Move()
 
 float Ant::CalculateHeuristic(Link link)
 {
-	return (X_WEIGHT * (1/link.usage_percentage) + link.pheromone);
+	return (X_WEIGHT * (1/link.usage_percentage) + PHEROMONE_WEIGHT * link.pheromone);
 }
 
 Node* Ant::ChooseLink(Node* current_node)

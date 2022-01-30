@@ -11,9 +11,11 @@ class AntColonyAlgorithm
 {
 public:
 	unsigned ColonySize = 1;
+	float evaporation_percentage = 0.5;
 
 	void Iterate(unsigned iterations, Node* start, Node* destination, NetworkStructure* network);
 	void ProcessNewAnt(Node* start, Node* destination, NetworkStructure* network);
+	void EvaporatePheromone(NetworkStructure* network);
 	AntColonyAlgorithm(unsigned ColonySize);
 	float bestScore = -1;
 	std::vector<Node*> bestPathX;
