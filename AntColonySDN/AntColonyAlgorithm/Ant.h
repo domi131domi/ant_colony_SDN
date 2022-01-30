@@ -8,6 +8,7 @@
 
 const float Y_WEIGHT = 1.0;
 const float X_WEIGHT = 1.0;
+const float PHEROMONE_WEIGHT = 20.0;
 
 class Ant
 {

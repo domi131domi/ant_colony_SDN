@@ -21,7 +21,6 @@ int main()
 		//algorithm.Iterate(1000, network->nodes["A"], network->nodes["E"], network);
 		for (int i = 0; i < 100; i++)
 		{
-
 			algorithm.Iterate(1, network->nodes["A"], network->nodes["G"], network);
 
 			std::cout << "Best score: " << algorithm.bestScore << std::endl;

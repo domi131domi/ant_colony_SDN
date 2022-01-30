@@ -7,8 +7,8 @@ void AntColonyAlgorithm::Iterate(unsigned iterations, Node* start, Node* destina
 		for (unsigned antCounter = 0; antCounter < ColonySize; antCounter++)
 		{
 			ProcessNewAnt(start, destination, network);
-			//reset feromonow
 		}
+		EvaporatePheromone(network);
 	}
 }
 
@@ -22,6 +22,17 @@ void AntColonyAlgorithm::ProcessNewAnt(Node* start, Node* destination, NetworkSt
 		bestPathX = ant.path;
 		bestPathX.push_back(destination);
 		bestPathY = ant.pathY;
+	}
+}
+
+void AntColonyAlgorithm::EvaporatePheromone(NetworkStructure* network)
+{
+	for (auto& node : network->nodes)
+	{
+		for (auto& link : node.second->links)
+		{
+			link.second.pheromone *= evaporation_percentage;
+		}	
 	}
 }
 
