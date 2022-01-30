@@ -20,6 +20,7 @@ class Ant
 	int movingBackIterator = -1;
 	Node* current_node;
 public:
+	bool dead = false;
 	bool Move();
 	float CalculateHeuristic(Link link);
 	Node* ChooseLink(Node* current_node);

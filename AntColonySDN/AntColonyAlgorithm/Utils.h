@@ -74,7 +74,7 @@ public:
 
 	static float costFunction(float pathYPoints, float yWeight, float pathXPoints, float xWeight)
 	{
-		return (yWeight / pathYPoints) + xWeight*(exp(pathXPoints));
+		return 1/((yWeight / pathYPoints) + xWeight*(exp(pathXPoints)));
 	}
 
 	
