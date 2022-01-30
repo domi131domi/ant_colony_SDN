@@ -16,7 +16,7 @@ void AntColonyAlgorithm::ProcessNewAnt(Node* start, Node* destination, NetworkSt
 {
 	Ant ant(start, destination, network);
 	while (ant.Move()) { ; }
-	if (bestScore < 0 || bestScore > ant.finalScore)
+	if (!ant.dead && (bestScore < 0 || bestScore > ant.finalScore))
 	{
 		bestScore = ant.finalScore;
 		bestPathX = ant.path;

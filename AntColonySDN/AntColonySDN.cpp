@@ -19,20 +19,25 @@ int main()
 
 		AntColonyAlgorithm algorithm(5);
 		//algorithm.Iterate(1000, network->nodes["A"], network->nodes["E"], network);
-		algorithm.Iterate(1000, network->nodes["A"], network->nodes["G"], network);
-
-		std::cout << "Best score: " << algorithm.bestScore << std::endl;
-
-		std::cout << "Best path Ants: " << algorithm.bestPathX[0]->id;
-		for (int i = 1; i < algorithm.bestPathX.size(); i++)
+		for (int i = 0; i < 100; i++)
 		{
-			std::cout << " -> " << algorithm.bestPathX[i]->id;
-		}
-		std::cout << std::endl;
-		std::cout << "Best path Dijkstra: " << algorithm.bestPathY[algorithm.bestPathY.size() - 1]->id;
-		for (int i = 1; i < algorithm.bestPathY.size(); i++)
-		{
-			std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
+
+			algorithm.Iterate(1, network->nodes["A"], network->nodes["G"], network);
+
+			std::cout << "Best score: " << algorithm.bestScore << std::endl;
+
+			std::cout << "Best path Ants: " << algorithm.bestPathX[0]->id;
+			for (int i = 1; i < algorithm.bestPathX.size(); i++)
+			{
+				std::cout << " -> " << algorithm.bestPathX[i]->id;
+			}
+			std::cout << std::endl;
+			std::cout << "Best path Dijkstra: " << algorithm.bestPathY[algorithm.bestPathY.size() - 1]->id;
+			for (int i = 1; i < algorithm.bestPathY.size(); i++)
+			{
+				std::cout << " -> " << algorithm.bestPathY[algorithm.bestPathY.size() - i - 1]->id;
+			}
+			std::cout << std::endl;
 		}
 		doc1.first->clear();
 		doc2.first->clear();

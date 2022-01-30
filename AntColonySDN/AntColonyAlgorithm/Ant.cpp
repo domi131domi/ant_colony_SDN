@@ -13,8 +13,11 @@ bool Ant::Move()
 		if (current_node != destination)
 		{
 			Node* chosen = ChooseLink(current_node);
-			if (current_node == chosen)
+			if (chosen == current_node)
+			{
+				dead = true;
 				return false;
+			}
 			path.push_back(current_node);
 			pathXpoints += log(1 - current_node->links[chosen].usage_percentage);
 			current_node = chosen;
@@ -24,9 +27,9 @@ bool Ant::Move()
 			std::map<Node*, Utils::DataTable> map = Utils::findDjikstraPaths(start, network, path);
 			pathY = Utils::createPath(map, start, destination);
 			float pathYPoints = map[destination].minimum_distance;
-			finalScore = Utils::costFunction(pathYPoints, Y_WEIGHT, pathXpoints, X_WEIGHT);
-			pheromone = finalScore;
-			std::cout << pheromone << std::endl;
+			finalScore = Utils::costFunction(pathYPoints, Y_WEIGHT, pathXpoints, X_WEIGHT);	//lepszy czym lepsza jest sciezka
+			pheromone = 1/finalScore;	//wiecej feromonow = mniej pkt
+			//std::cout << pheromone << std::endl;
 			movingForward = false;
 		}
 	}
@@ -45,7 +48,7 @@ bool Ant::Move()
 
 float Ant::CalculateHeuristic(Link link)
 {
-	return (X_WEIGHT * link.usage_percentage + link.pheromone);
+	return (X_WEIGHT * (1/link.usage_percentage) + link.pheromone);
 }
 
 Node* Ant::ChooseLink(Node* current_node)
