@@ -11,12 +11,12 @@ int main()
 	std::string start = "Freiburg";
 	std::string destination = "Flensburg";
 
-	std::string name_of_test = "low_max_traffic_";
+	std::string name_of_test = "dummy";
 
 	int printing = 50;				// defines number of saved records
-	int iterate = 20;				// defines a step of algorithm between saving records
+	int iterate = 200;				// defines a step of algorithm between saving records
 	int iters = printing * iterate;	// all iters of algorithm
-	std::string root_folder = "C:\\Users\\adams\\Desktop\\pop\\wyniczki\\testy\\";
+	std::string root_folder = "path/to/test/folder/";
 	std::string result_filename_scores = root_folder +
 		start + "-" + destination + "\\" + name_of_test +
 		"scores_" +

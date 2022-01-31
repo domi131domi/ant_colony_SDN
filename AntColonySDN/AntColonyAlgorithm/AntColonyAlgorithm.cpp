@@ -16,8 +16,8 @@ void AntColonyAlgorithm::Iterate(unsigned iterations, Node* start, Node* destina
 
 void AntColonyAlgorithm::ProcessNewAnt(Node* start, Node* destination, NetworkStructure* network)
 {
-	std::string tescik = "kazdy_Score";
-	std::string root_folder = "C:\\Users\\adams\\Desktop\\pop\\wyniczki\\testy\\";
+	std::string tescik = "kazdy_Score_brak_wygaszanie_feromonow";
+	std::string root_folder = "path/to/test/folder/";
 	std::string result_filename_scores = root_folder + tescik + ".txt";
 	Ant ant(start, destination, network);
 	while (ant.Move()) { ; }

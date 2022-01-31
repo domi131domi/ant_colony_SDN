@@ -7,7 +7,9 @@
 #include <map>
 #include "../DataManagement/Node.h"
 #include "../DataManagement/NetworkStructure.h"
-#define MAX_COST 1000000
+#include <cfloat>
+
+const float MAX_COST = FLT_MAX/1000000000000;
 
 class Utils
 {
