@@ -7,7 +7,7 @@
 #include <map>
 #include "../DataManagement/Node.h"
 #include "../DataManagement/NetworkStructure.h"
-#define MAX_TRAFFIC 10000000
+#define MAX_COST 1000000
 
 class Utils
 {
@@ -55,11 +55,11 @@ public:
 			std::vector<Node*>::iterator min = findSmallestUnvisited(unvisited, data);
 			for (std::pair<Node*, Link> link : (*min)->links)
 			{
-				float traffic = link.second.cost;
+				float cost = link.second.cost;
 				if (find(pathX.begin(), pathX.end(), link.first) != pathX.end())
-					traffic += MAX_TRAFFIC;
+					cost += MAX_COST;
 
-				float current_distance = data[*min].minimum_distance + traffic;
+				float current_distance = data[*min].minimum_distance + cost;
 				if (data[link.first].minimum_distance < 0 || data[link.first].minimum_distance > current_distance)
 				{
 					data[link.first].minimum_distance = current_distance;
@@ -74,8 +74,9 @@ public:
 
 	static float costFunction(float pathYPoints, float yWeight, float pathXPoints, float xWeight)
 	{
-						 //1                10 * 1-07  = 1-06    
-		return 1/((yWeight / pathYPoints) + xWeight*(exp(pathXPoints)));
+		float ypts = 1/(yWeight / pathYPoints);
+		float xpts = 1/(xWeight * exp(pathXPoints));
+		return ypts + xpts;
 	}
 
 	
